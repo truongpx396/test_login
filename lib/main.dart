@@ -583,3 +583,31 @@ class CustomTextStyle {
         fontSize: 14, fontWeight: FontWeight.normal, color: Colors.white);
   }
 }
+
+// void main() async {
+//   WidgetsFlutterBinding.ensureInitialized();
+//   await MySharedPreference.init();
+//   await Firebase.initializeApp();
+
+//   // Pass all uncaught errors from the framework to Crashlytics.
+//   FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterError;
+
+//   NeedsAPIConfiguration.RootURL = appConfig.apiEndpoint;
+//   CandidatesAPIConfiguration.RootURL = appConfig.apiEndpoint;
+
+//   final NeedRepository _needRepository = NeedRepository(MobileApi());
+//   final CandidateRepository _candidateRepository =
+//       CandidateRepository(SpaceMobileApi());
+
+//   runZonedGuarded(() {
+//     runApp(App(
+//       needBloc: NeedBloc(needRepository: _needRepository),
+//       candidateBloc: CandidateBloc(candidateRepository: _candidateRepository),
+//     ));
+//   }, (error, stackTrace) {
+//     debugPrint(error.toString());
+//     FirebaseCrashlytics.instance.recordError(error, stackTrace);
+//   });
+// }
+
+//flutter packages pub run build_runner build --delete-conflicting-outputs
